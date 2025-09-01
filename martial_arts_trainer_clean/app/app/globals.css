@@ -1,0 +1,130 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 210 40% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 12 88% 59%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 217.2 32.6% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 20%;
+    --input: 217.2 32.6% 15%;
+    --ring: 12 88% 59%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 210 40% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 12 88% 59%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 217.2 32.6% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 20%;
+    --input: 217.2 32.6% 15%;
+    --ring: 12 88% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Dark martial arts theme */
+.martial-gradient {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 50%, #F7931E 100%);
+}
+
+.martial-dark-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+}
+
+.technique-card {
+  @apply bg-card border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/50;
+}
+
+.combination-badge {
+  @apply inline-block px-3 py-1 text-xs font-medium rounded-full;
+}
+
+.difficulty-1 { @apply bg-green-500/20 text-green-400 border border-green-500/30; }
+.difficulty-2 { @apply bg-yellow-500/20 text-yellow-400 border border-yellow-500/30; }
+.difficulty-3 { @apply bg-orange-500/20 text-orange-400 border border-orange-500/30; }
+.difficulty-4 { @apply bg-red-500/20 text-red-400 border border-red-500/30; }
+.difficulty-5 { @apply bg-purple-500/20 text-purple-400 border border-purple-500/30; }
+
+/* Dark theme animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+/* Training session styles */
+.training-active {
+  @apply bg-primary/20 border-primary/50 shadow-primary/25;
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .technique-card {
+    @apply p-4;
+  }
+}
