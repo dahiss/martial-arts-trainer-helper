@@ -35,7 +35,7 @@ A modern, responsive web application designed to help martial arts enthusiasts l
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/martial-arts-trainer.git
+git clone https://github.com/dahiss/martial-arts-trainer-helper.git
 
 # Navigate to project directory
 cd martial-arts-trainer/app
